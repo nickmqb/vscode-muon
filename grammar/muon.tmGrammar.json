@@ -1,0 +1,68 @@
+{
+    "scopeName": "source.muon",
+    "patterns": [
+        { "include": "#comment" },
+        { "include": "#control-keyword" },
+        { "include": "#other-keyword" },
+        { "include": "#string" },
+        { "include": "#char" },
+        { "include": "#integer" },
+        { "include": "#boolean" },
+        { "include": "#pointer" },
+        { "include": "#typename" },
+        { "include": "#probably-typename" },
+        { "include": "#attribute" },
+        { "include": "#builtin" }
+    ],
+    "repository": {
+        "comment": {
+            "name": "comment.muon",
+            "begin": "//",
+            "end": "$"
+        },
+        "control-keyword": {
+            "name": "keyword.control.muon",
+            "match": "\\b(return|if|else|while|for|in|break|continue|match)\\b"
+        },
+        "other-keyword": {
+            "name": "keyword.other.muon",
+            "match": "\\b(new|ref|struct|enum|tagged_pointer|import)\\b"
+        },
+        "string": {
+            "name": "string.quoted.double.muon",
+            "match": "\"([^\"\\\\\\n]|\\\\[^\\n]?)*?[\"\\n]"
+        },
+        "char": {
+            "name": "constant.character.muon",
+            "match": "'([^'\\\\\\n]|\\\\[^\\n]?)*?['\\n]"
+        },
+        "integer": {
+            "name": "constant.numeric.muon",
+            "match": "\\b(0x[0-9A-Fa-f]+|[0-9]+)(_[a-z]+)?\\b"
+        },
+        "boolean": {
+            "name": "constant.language.muon",
+            "match": "\\b(false|true)\\b"
+        },
+        "pointer": {
+            "name": "constant.language.muon",
+            "match": "\\bnull\\b"
+        },
+        "typename": {
+            "name": "support.type.muon",
+            "match": "\\b(void|byte|sbyte|short|ushort|int|uint|long|ulong|ssize|usize|float|double|char|bool|bool32|string|cstring|pointer|fun)\\b"
+        },
+        "probably-typename": {
+            "name": "support.type.muon",
+            "match": "\\b[A-Z][A-Za-z0-9_]*\\b"
+        },
+        "attribute": {
+            "name": "storage.modifier.muon",
+            "match": "#[A-Za-z_][A-Za-z0-9_]*\\b"
+        },
+        "builtin": {
+            "name": "support.function.muon",
+            "match": "\\b(abandon|assert|checked_cast|cast|pointer_cast|transmute|is|as|format|min|max|xor|sizeof|compute_hash|default_value|unchecked_index|get_argc_argv)\\b"
+        }
+    }
+}

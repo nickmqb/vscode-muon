@@ -1,0 +1,55 @@
+{
+	"name": "vscode-muon",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nickmqb/vscode-muon"
+	},
+	"license": "MIT",
+	"description": "VSCode extension for the Muon language",
+	"publisher": "nickmqb",
+	"version": "0.1.0",
+	"engines": {
+		"vscode": "^1.25.0"
+	},
+	"activationEvents": [
+		"onLanguage:muon"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"languages": [
+			{
+				"id": "muon",
+				"extensions": [
+					".mu"
+				]
+			}
+		],
+		"grammars": [
+			{
+				"language": "muon",
+				"scopeName": "source.muon",
+				"path": "./grammar/muon.tmGrammar.json"
+			}
+		],
+		"configuration": {
+			"title": "Muon",
+			"properties": {
+				"muon.languageServerPath": {
+					"type": "string",
+					"default": "",
+					"description": "Path of the Muon language server binary (e.g. \"C:/language_server.exe\")"
+				},
+				"muon.languageServerArguments": {
+					"type": "string",
+					"default": "",
+					"description": "Command line arguments for the Muon language server"
+				}
+			}
+		},
+		"commands": []
+	},
+	"dependencies": {
+		"vscode-languageclient": "^4.4.2"
+	},
+	"devDependencies": {}
+}
