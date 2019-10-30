@@ -1,6 +1,6 @@
 # vscode-muon
 
-This VSCode extension provides syntax highlighting and interactive language feature for the Muon programming language, such as symbol search, go to definition and as-you-type diagnostics. Examples:
+This VSCode extension provides syntax highlighting and interactive language features for the Muon programming language, such as symbol search, go to definition and as-you-type diagnostics. Examples:
 
 ![alt text](https://github.com/nickmqb/vscode-muon/blob/master/symbol-search.gif "Symbol search")
 ![alt text](https://github.com/nickmqb/vscode-muon/blob/master/go-to-definition.gif "Go to definition")
