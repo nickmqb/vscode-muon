@@ -1,2 +1,4 @@
 node_modules/**
 dist/**
+!dist/\[Content_Types\].xml
+!dist/extension.vsixmanifest
