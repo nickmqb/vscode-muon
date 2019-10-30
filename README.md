@@ -20,8 +20,8 @@ Language features are provided using the Muon language server ([learn more](http
 ### Project configuration
 
 1. In VSCode, open the workspace for the project that you're going to work on. If you don't have a workspace for the project, create one.
-2. Go to workspace settings (UI). Filter by 'muon', find the setting 'Muon: Language Server Arguments', and set it to: `--args [path]`, where path is the path to a `.args` file that would normally be passed to the compiler ([read more about .args files here](https://github.com/nickmqb/muon/blob/master/docs/getting_started.md#args-files)). E.g.: `--args hello_world.args`
-	*Important!* The path must be a relative path that does not contain any spaces. It must be relative to the first folder of your workspace. Also, all source file paths in the .args file must be relative paths. Language features like symbol search only work for source files that are listed in the .args file. Syntax highlighting works for all `.mu` files.
+2. Go to workspace settings (UI). Filter by 'muon', find the setting 'Muon: Language Server Arguments', and set it to: `--args [path]`, where path is the path to a `.args` file that would normally be passed to the compiler ([read more about .args files here](https://github.com/nickmqb/muon/blob/master/docs/getting_started.md#args-files)). E.g.: `--args hello_world.args`  
+	**Important!** The path must be a relative path that does not contain any spaces. It must be relative to the first folder of your workspace. Also, all source file paths in the .args file must be relative paths. Language features like symbol search only work for source files that are listed in the .args file. Syntax highlighting works for all `.mu` files.
 3. Restart VSCode.
 4. The extension is now ready for use! Open a `.mu` file to see syntax highlighting in action. Select 'Go to Symbol in Workspace...' (`Ctrl + T`) for symbol search.
 5. If you make any changes to the .args file, restart VSCode so the extension will pick up the changes.
