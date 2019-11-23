@@ -1,8 +1,15 @@
-const assert = require('assert');
-const fs = require('fs');
-const path = require('path');
-const vscode = require('vscode');
-const vscode_languageclient = require('vscode-languageclient');
+const vscode = require("vscode");
+const vscode_languageclient = require("vscode-languageclient");
+
+class FailFastErrorHandler {
+    error(_error, _message, count) {
+        return ErrorAction.Shutdown;
+    }
+    closed() {
+		vscode.window.showErrorMessage("The Muon language server has crashed");
+		return CloseAction.DoNotRestart;
+    }
+}
 
 /**
  * @param {vscode.ExtensionContext} context
@@ -22,6 +29,8 @@ function activate(context) {
 		return;
 	}
 
+	var failFast = (!!config.get("failFast")) || false;
+
 	var serverOptions = {
 		command: binaryPath,
 		args: [ args ]
@@ -29,6 +38,7 @@ function activate(context) {
 
 	var clientOptions = {
 		documentSelector: [{ scheme: 'file', language: 'muon' }],
+		errorHandler: failFast ? new FailFastErrorHandler() : null,
 	};
 
 	var client = new vscode_languageclient.LanguageClient("muonLanguageServer", "Muon language server", serverOptions, clientOptions);

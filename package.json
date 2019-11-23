@@ -43,6 +43,11 @@
 					"type": "string",
 					"default": "",
 					"description": "Command line arguments for the Muon language server"
+				},
+				"muon.failFast": {
+					"type": "boolean",
+					"default": "",
+					"description": "Prevents the server from being restarted after it has crashed"
 				}
 			}
 		},
