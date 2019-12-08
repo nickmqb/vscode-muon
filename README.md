@@ -17,7 +17,7 @@ Language features are provided by the [Muon language server](https://github.com/
 
 1. Clone [the Muon repo](https://github.com/nickmqb/muon) and [bootstrap the compiler](https://github.com/nickmqb/muon/blob/master/docs/getting_started.md).
 2. [Build the language server](https://github.com/nickmqb/muon/blob/master/language_server/README.md#Build) as described in the 'Build' section. You do not need to follow the steps in the 'Run' section, the VS Code extension will run the language server automatically.
-3. Download the [VS Code `.vsix` extension file](https://github.com/nickmqb/vscode-muon/releases/download/v0.1.0/vscode-muon-0.1.0.vsix). Alternatively, [build the extension yourself](#extension-development).
+3. Download the [VS Code `.vsix` extension file](https://github.com/nickmqb/vscode-muon/releases/download/v0.2.0/vscode-muon-0.2.0.vsix). Alternatively, [build the extension yourself](#extension-development).
 4. Start VS Code. Bring up command palette (`Ctrl + Shift + P`), select `Extensions: Install from VSIX...` and select the `.vsix` file.
 5. Go to settings (UI). Filter by 'muon', find the setting 'Muon: Language Server Path', and set it to the full path of the language_server binary that you built in step 2. E.g.: `C:/language_server.exe`
 6. Follow the steps below for each project.
