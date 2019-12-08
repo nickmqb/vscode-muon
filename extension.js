@@ -33,7 +33,8 @@ function activate(context) {
 
 	var serverOptions = {
 		command: binaryPath,
-		args: [ args ]
+		args: [ args ],
+		options: { shell: true },
 	};
 
 	var clientOptions = {
