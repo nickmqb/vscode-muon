@@ -38,7 +38,7 @@
         },
         "integer": {
             "name": "constant.numeric.muon",
-            "match": "\\b(0x[0-9A-Fa-f]+|[0-9]+)(_[a-z]+)?\\b"
+            "match": "\\b(0x[0-9A-Fa-f]+|[0-9]+)(_[a-zA-Z]+)?\\b"
         },
         "boolean": {
             "name": "constant.language.muon",
