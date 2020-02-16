@@ -29,6 +29,11 @@ function activate(context) {
 		return;
 	}
 
+	var crashDumpPath = config.get("crashDumpPath");
+	if (crashDumpPath) {
+		args += " --crash-dump-path \"" + crashDumpPath + "\"";
+	}
+
 	var failFast = (!!config.get("failFast")) || false;
 
 	var serverOptions = {

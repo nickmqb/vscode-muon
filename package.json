@@ -7,7 +7,7 @@
 	"license": "MIT",
 	"description": "VSCode extension for the Muon language",
 	"publisher": "nickmqb",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"engines": {
 		"vscode": "^1.25.0"
 	},
@@ -48,6 +48,11 @@
 					"type": "boolean",
 					"default": "",
 					"description": "Prevents the server from being restarted after it has crashed"
+				},
+				"muon.crashDumpPath": {
+					"type": "string",
+					"default": "",
+					"description": "Path of crash dump file (Windows only for now)"
 				}
 			}
 		},
